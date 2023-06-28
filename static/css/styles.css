@@ -1,4 +1,8 @@
 footer {
     color: azure;
-    height: 2rem;
+    height: 3rem;
+}
+
+.empty {
+    height: 3rem;
 }

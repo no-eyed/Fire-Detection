@@ -20,8 +20,13 @@ def allowed_file(filename):
 
 def preProcessImage(filename):
     print(f"Function is appning for '{filename}'")
-    img = cv2.imread(f"uploads/{filename}") 
-    cv2.imwrite(f"static/inputs/image.jpg", img)
+    img = cv2.imread(f"uploads/{filename}")
+    height, width, channels = img.shape
+    aspectratio = width / height
+    new_width = aspectratio * 300
+    new_height = 300
+    new_img = cv2.resize(img, (int(new_width), int(new_height)), interpolation = cv2.INTER_LINEAR) 
+    cv2.imwrite(f"static/inputs/image.jpg", new_img)
     return filename
 
 

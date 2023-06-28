@@ -25,6 +25,7 @@
               </div>
             </div>
         </nav>
+        <div class="overflow-auto">
         <div class="container">
           {% with messages = get_flashed_messages(with_categories=true) %}
           {% if messages %}
@@ -43,8 +44,12 @@
           <img src="./static/results/boxed_image.jpg" class="rounded mx-auto d-block border border-3 border-dark-subtle p-2 g-col-6 bg-success-subtle" alt="Predicted Image">
           <p class="text-center fs-5 text fw-medium text-secondary-emphasis">This is the predicted image where a colored outlined box implies presence of fire</p>
         </div>
-        <footer class="bg-primary bg-gradient ">
-          <!-- Made with help of ordinary coders on fire -->
+        <div class="empty">
+
+        </div>
+      </div>
+        <footer class="mx-auto p-2 bg-primary bg-gradient fixed-bottom">
+           <p class="text-center fs-6 text fw-medium">Made with help of ordinary coders on fire</p>
         </footer>
     </div>
     
