@@ -47,8 +47,9 @@ def upload():
             new = preProcessImage(filename)
             ai.check()
             print(new)
-            flash(f"Your Image has been processed <a href='/static/results/boxed_image.jpg' target='_blank'>Here</a>")
-            return render_template('home.html')
+            flash(f"Your Image has been processed ")
+            # print(<a href='/static/results/boxed_image.jpg' target='_blank'>Here</a>)
+            return render_template('result.html')
         
     return render_template('home.html')
 
@@ -57,7 +58,7 @@ def upload():
 #     return redirect('/home', code=302)
 
 if __name__ == "__main__":
-    app.app(debug=True,host="0.0.0.0",port=8000)
+    app.run(debug=True,host="0.0.0.0",port=8000)
 
 
 
